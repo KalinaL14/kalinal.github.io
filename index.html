@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <title>Кровля - региональная сеть.</title>
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="img/logo.svg" alt="Кровля">
+        </a>
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#" title="Страница в разработке">Кровля</a> </li>
+                <li><a href="#" title="Страница в разработке">Фасад</a></li>
+                <li><a href="#" title="Страница в разработке">Ограждения</a></li>
+                <li><a href="#" title="Страница в разработке">Водосток</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+79370743636" class="telefon">+7 (937) 074-36-36</a>
+    </header>
+    
+    <main>
+        <section class="main-display">
+            <h2>Всё, что вы искали для крыши, фасада, забора или водостока</h2>
+            <button id="call" class="button">Заказать обратный звонок</button>
+            <div id="modal-open" hidden class="modal-container">
+                <div class="modal-form">
+                    <span class="modal-title">Заказать звонок</span>
+                    <span class="modal-description">Напишите и специалист свяжется с вами в ближайшее время</span>
+                    <form action="send.php" method="POST">
+                        <input type="text" name="name" placeholder="Имя*">
+                        <input type="text" name="phone" placeholder="Телефон*">
+                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="submit" name="submit" class="modal__button" value="Отправить">
+                    </form>
+                    <img id="closed" src="img/closed.png" alt="Закрыть" class="modal-closed">
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="card">
+                    <img src="img/roof.jpg" alt="Кровля" class="card__image">
+                    <div class="card__text">
+                        <h3 class="card__title">Кровля</h3>
+                        <div class="card__description">Предлагаем различные виды кровельных покрытий и комплектующих</div>
+                        <a href="#" title="Страница в разработке" class="card__link">
+                            <span>Узнать больше</span>
+                            <img src="img/redarrow.svg" alt="Кровля">
+                        </a> 
+                    </div>    
+                </div>
+                <div class="card">
+                    <img src="img/facade.jpg" alt="Фасад" class="card__image">
+                    <div class="card__text">
+                        <h3 class="card__title">Фасад</h3>
+                        <div class="card__description">Облицовка фасада? Цоколь? Терраса? Вам сюда!</div>
+                        <a href="#" title="Страница в разработке" class="card__link">
+                            <span>Узнать больше</span>
+                            <img src="img/redarrow.svg" alt="Фасад">
+                        </a> 
+                    </div>    
+                </div>
+                <div class="card">
+                    <img src="img/fence.jpg" alt="Забор" class="card__image">
+                    <div class="card__text">
+                        <h3 class="card__title">Забор</h3>
+                        <div class="card__description">Построить забор не так уж и сложно с нашими материалами</div>
+                        <a href="#" title="Страница в разработке" class="card__link">
+                            <span>Узнать больше</span>
+                            <img src="img/redarrow.svg" alt="Забор">
+                        </a>
+                    </div>   
+                </div>
+                <div class="card">
+                    <img src="img/gutter.jpg" alt="Водосток" class="card__image">
+                    <div class="card__text">
+                        <h3 class="card__title">Водосток</h3>
+                        <div class="card__description">Только у нас – металлическая водосточная система 12 цветов!</div>
+                        <a href="#" title="Страница в разработке" class="card__link">
+                            <span>Узнать больше</span>
+                            <img src="img/redarrow.svg" alt="Водосток">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/production.jpg" alt="Производство" class="card__image">
+                    <div class="card__text">
+                        <h3 class="card__title">Производство</h3>
+                        <div class="card__description">Доборные элементы по вашим размерам на собственном производстве</div>
+                        <a href="#" title="Страница в разработке" class="card__link">
+                            <span>Узнать больше</span>
+                            <img src="img/redarrow.svg" alt="Производство">
+                        </a>
+                    </div>
+                </div>
+            </div>              
+        </section>
+
+        <section class="reviews">
+            <h1>Отзывы</h1>
+                <div class="reviews__subtitle">Еще раздумываете над приобретением кровельных или других материалов? Почитайте отзывы ваших соседей. Они о нас уже знают!</div>
+                <div class="reviews-box">
+                    <div class="reviews__text">
+                        <img src="img/commas.svg" class="reviews__svg">
+                        <div class="reviews__description">​Брал металлочерепицу на баню в 2010 году, до сих пор все как новенькое. Вот это я понимаю качество! В планах менять кровлю на доме, обязательно приду снова к вам.
+                            <div class="reviews__author">Александр</div>
+                        </div>             
+                    </div>
+                    <div class="reviews__text">
+                        <img src="img/commas.svg" class="reviews__svg">
+                        <div class="reviews__description">Очень доволен качеством обслуживания и ассортиментом, включая весь процесс работы начиная с заявок, заканчивая отгрузкой и доставкой.
+                          <div class="reviews__author">Геннадий Алексеевич</div>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <img src="img/commas.svg" class="reviews__svg">
+                        <div class="reviews__description">Заказывали материалы для частного дома. Хочется отметить быструю доставку и аккуратную упаковку. Качеством материалов тоже остались довольны.
+                          <div class="reviews__author">Гульфира</div>
+                        </div>
+                    </div>
+                    <div class="reviews__text">
+                        <img src="img/commas.svg" class="reviews__svg">
+                        <div class="reviews__description">Хочу сказать большое спасибо! Приехали, замерили, подсказали как лучше. Заказывали сначала профнастил на гараж, решили заказать и на дом. Спасибо! Всем советую!
+                          <div class="reviews__author">Лариса</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="about">
+            <h2>О компании «Кровля - региональная сеть»</h2>
+                <div class="company__info">
+                    <p>«Кровля - региональная сеть» поставляет современные кровельные и отделочные материалы: металлочерепица, профнастил (профлист), гладкий лист, гибкая (мягкая) черепица, сэндвич-панели, виниловый и металлический сайдинг, водосточные системы, плёнки и утеплители, снегозадержатели, доборные элементы и многое другое.</p>
+                    <p>Помогаем составить комплект для «кровельного пирога», консультируем по вопросам об устройстве водостока, рассчитываем количество материалов для забора и даем рекомендации, если вы решили строить своими руками. Предлагаем лучшие кровельные материалы от российских и европейских производителей, в любой ценовой категории.</p>
+                    <p>Обратите внимание, наличие товара и цены могут отличаться в зависимости от выбранного вами города: Самара, Тольятти, Жигулевск, Димитровград, Сызрань, Лениногорск, Балаково, Нурлат, Новоспасское, Шигоны, поэтому мы рекомендуем уточнять информацию у менеджеров в вашем городе или по бесплатной линии 8 (937) 074-36-36.</p>
+                </div>
+                <div class="company__box">
+                    <div class="company__excellence arrow">
+                        <img src="img/arrow.svg" class="company__svg">     
+                        <div class="company__description">
+                            <h3 class="company__property">Быстро</h3>
+                            Мы сотрудничаем напрямую с производителями, поэтому можем предложить вам изготовление и доставку прямо с завода в течении 3-х дней
+                        </div>
+                    </div>
+                    <div class="company__excellence smile">
+                        <img src="img/smile.svg" class="company__svg">
+                        <div class="company__description">
+                            <h3 class="company__property">Близко</h3>
+                            Наши филиалы расположены в: Самаре, Тольятти, Сызрани, Димитровграде, Жигулёвске, Нурлате, Балаково, Лениногорске, Шигонах и Новоспасском
+                        </div>
+                    </div>
+                    <div class="company__excellence heart">
+                        <img src="img/heart.svg" class="company__svg">   
+                        <div class="company__description">
+                            <h3 class="company__property">Удобно</h3>
+                            Мы комплектуем кровли «под ключ», предлагая все необходимые материалы. А ещё производим замеры, расчеты и доставку до строительного объекта
+                        </div>
+                    </div>
+                    <div class="company__excellence star">
+                        <img src="img/star.svg" class="company__svg">
+                        <div class="company__description">
+                            <h3 class="company__property">Качественно</h3>
+                            Каждая партия продукции проходит строгий контроль на соответствие стандартам качества. А наши клиенты в этом убедились за долгие годы сотрудничества
+                        </div>
+                    </div>
+                    <div class="company__excellence mark">
+                        <img src="img/mark.svg" class="company__svg">
+                        <div class="company__description">
+                            <h3 class="company__property">По низкой цене</h3>
+                            Мы имеем возможность предложить нашим клиентам самую низкую цену, а оптовым покупателям сделать дополнительную скидку!
+                        </div>
+                    </div>
+                </div>             
+        </section>
+
+        <section class="contact">
+            <h1>Мы в вашем городе</h1>
+                <div class="contact__box">
+                    <a href="#" class="contact__city">
+                        <img src="img/samara.png" alt="Самара">
+                        <span>Самара</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/toliyatti.png" alt="Тольятти">
+                        <span>Тольятти</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/syzran.png" alt="Сызрань">
+                        <span>Сызрань</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/zgigulevsk.png" alt="Жигулевск">
+                        <span>Жигулевск</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/dimitrovgrad.png" alt="Димитровград">
+                        <span>Димитровград</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/leninogorsk.png" alt="Лениногорск">
+                        <span>Лениногорск</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/balakovo.png" alt="Балаково">
+                        <span>Балаково</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/nurlat.png" alt="Нурлат">
+                        <span>Нурлат</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/novospasskoe.png" alt="Новоспасское">
+                        <span>Новоспасское</span>
+                    </a>
+                    <a href="#" class="contact__city">
+                        <img src="img/shygony.png" alt="Шигоны">
+                        <span>Шигоны</span>
+                    </a>
+                </div>
+        </section>
+
+        <section class="partner">
+            <h2>Наши партнеры</h2>
+            <div class="partner__block">
+                <a href="#">
+                    <img src="img/npc.png" alt="НПЦ Кровля">
+                </a>
+                <a href="https://www.grandline.ru/">
+                    <img src="img/grand.png" alt="Grand Line">
+                </a>
+                <a href="https://www.tn.ru/">
+                    <img src="img/tehno.png" alt="ТЕХНОНИКОЛЬ">
+                </a>
+                <a href="https://www.docke.ru/">
+                    <img src="img/docke.png" alt="Дёке">
+                </a>
+                <a href="https://www.severstal.com/rus/">
+                    <img src="img/severstal.png" alt="Северсталь">
+                </a>
+                <a href="http://www.mmk.ru/">
+                    <img src="img/magnit.png" alt="ММК">
+                </a>
+                <a href="http://laumans-russia.com/">
+                    <img src="img/laumans.png" alt="Laumans">
+                </a>
+                <a href="http://katepal-russia.ru/">
+                    <img src="img/katepal.png" alt="Katepal">
+                </a>
+                <a href="http://www.feldhaus.ru/">
+                    <img src="img/feldhaus.png" alt="Feldhaus">
+                </a>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer__wrap">
+                <a href="#" class="logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <a href="tel:+79370743636" class="telefon">+7 (937) 074-36-36</a>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-items">
+                    <li class="footer-items__title"><b>Главная</b></li>
+                    <li>Как выбрать?</li>
+                    <li>О качестве</li>
+                    <li>Отзывы</li>
+                    <li>Фото</li>
+                </ul>
+                <ul class="footer-items">
+                    <li class="footer-items__title"><b>Кровля</b></li>
+                    <li>Металлочерепица</li>
+                    <li>Профнастил</li>
+                    <li>Гибкая кровля</li>
+                    <li>Плита ОСП</li>
+                    <li>Ондулин</li>
+                    <li>Комплектующие</li>
+                  </ul>
+                  <ul class="footer-items">
+                    <li class="footer-items__title"><b>Фасад</b></li>
+                    <li>Металлический сайдинг</li>
+                    <li>Виниловый сайдинг</li>
+                    <li>Акриловый сайдинг</li>
+                    <li>Террасная доска</li>
+                    <li>Цокольные панели</li>
+                    <li>Профлист</li>
+                    <li>Комплектующие</li>
+                  </ul>
+                  <ul class="footer-items">
+                    <li class="footer-items__title"><b>Заборы и ограждения</b></li>
+                    <li>Профнастил</li>
+                    <li>Штакетник</li>
+                    <li>Сварная сетка</li>
+                    <li>Модульные ограждения</li>
+                  </ul>
+                  <ul class="footer-items">
+                    <li class="footer-items__title"><b>Водосток</b></li>
+                    <li>Металлический водосток</li>
+                    <li>Пластиковый водосток</li>
+                    <li>Снегозадержатели</li>
+                  </ul>
+                  <ul class="footer-items">
+                    <li class="footer-items__title"><b>Контакты</b></li>
+                    <li>Самара</li>
+                    <li>Тольятти</li>
+                    <li>Сызрань</li>
+                    <li>Жигулевск</li>
+                    <li>Димитровград</li>
+                    <li>Лениногорск</li>
+                    <li>Балаково</li>
+                    <li>Нурлат</li>
+                    <li>Новоспасское</li>
+                    <li>Шигоны</li>
+                  </ul>
+            </div>    
+        </section>
+    </main>
+    <footer class="block-center">
+        &copy; Все материалы данного сайта являются объектами авторского права (в том числе дизайн). Запрещается копирование, распространение (в том числе путем копирования на другие сайты и ресурсы в Интернете) или любое иное использование информации и объектов без предварительного согласия правообладателя.
+    </footer>
+</body>
+
+</html>
