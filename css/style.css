@@ -25,6 +25,8 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 .footer {
@@ -85,6 +87,7 @@ section {
     height: 100%;
     justify-content: space-between;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 .card__image {
@@ -104,6 +107,10 @@ section {
     font-size: 14px;
     line-height: 17px;
     color: #000000;
+    margin-top: 10px;
+}
+.card__link:hover img {
+    transform: translate3d(5px, 0, 0);
 }
 
 .reviews__subtitle {
@@ -140,11 +147,16 @@ p {
     padding-bottom: 30px;
     flex-shrink: 0;
     color: #000000;
+    font-size: 14px;
 }
 .company__excellence {
     display: flex;
     padding: 20px;
     color: #000000;  
+}
+.company__description {
+    font-size: 14px;
+    line-height: 17px;
 }
 .company__svg {
     width: 40px;
@@ -296,6 +308,7 @@ form {
     text-align: center;
     margin-bottom: 5px;
     border: #FFFFFF;
+    outline: none;
 }
 
 .main-display h2 {
@@ -311,7 +324,7 @@ form {
 }
 
 /* Header */
-.header{
+.header {
     position: sticky;
     top: 0;
     width: 100%;
@@ -326,9 +339,7 @@ form {
     order: 3;
 }
 
-.nav{
-    width: 100%;
-    height: 100%;
+.nav {
     position: fixed;
     background-color: #989797;
     overflow: hidden;
@@ -361,8 +372,7 @@ form {
     display: block;
     height: 2px;
     position: relative;
-    width: 22px;
-    
+    width: 22px;   
 }
 
 .hamb-line::before,
@@ -394,22 +404,46 @@ form {
 .side-menu:checked ~ nav{
     max-height: 100%;
     z-index: 15;
-    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.side-menu:checked ~ nav li {
+    margin-right: 60px;
+}
+.side-menu:checked ~ nav ul {
+  margin-top: 80px;
+}
+.side-menu:checked ~ nav a {
+    color: #FFFFFF;
+    letter-spacing: 0.11em;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #FFFFFF;
+}
+.side-menu:checked ~ nav a:focus {
+    color: #00CBE7;
 }
 
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
+    margin-left: 10px;
 }
 
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
     top:0;
+    z-index: 16;
+    background: white;
 
 }
 
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
     top:0;
+    z-index: 16;
+    background: white;
 }
 .side-menu {
     display: none;
@@ -419,14 +453,25 @@ form {
     display: grid;
     grid-template-columns: repeat(1, 281px);
     grid-gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 40px;
+}
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.map-box :last-child {
+    justify-content: flex-start;
+}
+.map__image {
+    margin-top: 20px;
 }
 .map-box a {
     color: #000;
+    padding-top: 5px;
 }
 .map__addres {
-    margin-bottom: 5px;
     margin-top: 5px;
 }
 .map__mail {
@@ -455,11 +500,15 @@ form {
         padding: 0;
         max-width: 704px; 
     }
-    .header{
+    section {
+        margin-bottom: 60px;
+    }
+    .header {
         padding: 20px 0 30px 0;
     }
     .header .logo {
         order: 2;
+        margin-left: 10%;
     }
     
     h1 {
@@ -484,6 +533,10 @@ form {
         align-items: center;
         display: flex;
         flex-direction: column;
+        text-align: center;
+    }
+    .company__svg {
+        margin-right: 0px;
     }
     .card-box {
         display: grid;
@@ -494,7 +547,8 @@ form {
     .card {
         flex-direction: column;
         height: 100%;
-        border-bottom: 2px solid #D3D1D1;
+        border-bottom: none;
+        padding-bottom: none;
     }
     .card__image {
         width: 100%;
@@ -503,6 +557,9 @@ form {
     }
     .card__text {
         margin-left: 0px;
+        margin-right: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #D3D1D1;
     }
     .card__title {
         margin-top: 25px;
@@ -510,7 +567,6 @@ form {
     .card__description {
         font-size: 16px;
         line-height: 19px;
-        padding-right: 20px;
     }
     .reviews-box {
         display: flex;
@@ -568,17 +624,35 @@ form {
         grid-template-columns: repeat(2, 281px);
         grid-gap: 50px;
     }
+    .map__image {
+        margin-top: 40px;
+    }
+    .side-menu:checked ~ nav {
+        padding-top: 80px;
+    }
+    .side-menu:checked ~ nav li {
+        width: 50%;
+        margin-right: 0px;
+    }
+    .side-menu:checked ~ nav ul {
+      display: flex;
+      flex-direction: column;
+      flex-flow: wrap;
+      max-width: 520px;
+      margin: auto;
+    }
 }
 @media (min-width: 980px) {
     body {
         max-width: 980px;
     }
-    .header{
+    .header {
         padding: 20px 0 40px 0;
         align-items: end;
     }
     .header .logo {
         order: 1;
+        margin-left:  0px;
     }
     .nav{
         max-height: none;
@@ -609,6 +683,9 @@ form {
     }
     .card {
         width: 188px;
+    }
+    .card__text {
+        margin-right: 30px;
     }
     p {
         flex-basis: 291px;
